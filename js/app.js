@@ -713,6 +713,15 @@
       let cells = '<div class="rcell new"><i class="film"></i><b class="pb" aria-hidden="true"></b></div>';
       for (let i = 0; i < 7; i++) cells += '<div class="rcell"></div>';
       vis.insertAdjacentHTML('beforeend', '<div class="expbox"><div class="roll" aria-hidden="true">' + cells + '</div><div class="prog"><i></i></div><span class="lb"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="ck"><path d="M20 6 9 17l-5-5"/></svg><em>Seu filme</em></span></div>');
+      const destinations = [
+        ['Fotos', '<rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="8" cy="9" r="1.3"/><path d="m4 17 5-5 4 4 3-3 4 4"/>'],
+        ['AirDrop', '<path d="M5 16a9 9 0 1 1 14 0M8 14a5 5 0 1 1 8 0m-6 5 2-4 2 4z"/>'],
+        ['Mensagens', '<path d="M20 11a8 7 0 1 0-12 6l-3 3 5-2a8 7 0 0 0 10-7Z"/>'],
+        ['Mail', '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/>']
+      ];
+      $('.expbox', vis).insertAdjacentHTML('beforeend', '<ul class="export-options" aria-label="Exemplos de destinos">' + destinations.map(([label, path]) =>
+        '<li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + path + '</svg>' + label + '</li>'
+      ).join('') + '</ul>');
       const nc = $('.rcell.new', vis), fl = $('.film', nc), bar = $('.prog i', vis), lbl = $('.lb', vis), em = $('.lb em', vis);
       const fs = new Stage(fl, 'caminho', 1.6); fs.svg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%'; fs.cam(800, 500, 1000);
       const show = (v, done) => { bar.style.transform = 'scaleX(' + v.toFixed(3) + ')'; nc.style.opacity = done ? '1' : '.18'; nc.style.transform = 'scale(' + (done ? 1 : .86) + ')'; lbl.classList.toggle('ok', done); em.textContent = done ? 'Salvo no rolo de fotos' : v > 0 ? 'Exportando' : 'Seu filme'; $('.prog', vis).style.opacity = done ? '0' : '1'; };
@@ -720,8 +729,14 @@
       onView(vis, (ms) => { const t = (ms % 6000) / 6000, v = smooth(t, .06, .55); show(v, t > .6 && t < .97); if (t >= .97) show(0, false); }, () => show(1, true));
     }
     else if (kind === 'play') {
-      const r = document.createElement('div'); r.className = 'player compact'; r.dataset.motion = 'tutorial'; r.dataset.aspect = '1.6'; r.dataset.title = 'Estudo: reprodução do percurso'; r.dataset.id = 'tutorial';
-      vis.appendChild(r); mountPlayer(r);
+      vis.innerHTML = '<div class="replay-pair"><div class="replay-track"><span>Percurso dos Frames</span><div class="replay-overview"></div></div><div class="replay-film"><span>Filme</span><div class="player compact" data-motion="tutorial" data-aspect="16/9" data-id="tutorial" data-title="Estudo: reprodução do filme"></div></div></div>';
+      const aspect = 16 / 9;
+      const motion = MOT.tutorial;
+      const track = $('.replay-overview', vis);
+      const ov = overview(track, motion.scene, { frames: TUT, path: buildPath(motion), aspect, numbers: true, label: 'Enquadramentos e posição da câmera durante a reprodução' });
+      const film = $('.player', vis);
+      film.__onCam = (x, y, height) => ov.setCam(x, y, height, aspect);
+      mountPlayer(film);
     }
     else if (kind === 'adjust') {
       const ADJF = [[460, 560, 400], [900, 400, 360], [1240, 620, 300]];
