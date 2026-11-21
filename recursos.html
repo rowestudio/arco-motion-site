@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recursos do Arco Motion</title>
+<meta name="description" content="Arco Motion: explore estudos de enquadramento, percurso, ritmo e profundidade.">
+<meta name="theme-color" content="#24262b">
+<link rel="icon" type="image/png" href="assets/arcomotion-simbolo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Arco Motion — início">
+      <img src="assets/arco-motion-fundo-escuro.svg" width="382" height="100" alt="Arco Motion">
+    </a>
+    <nav class="nav landing-nav" aria-label="Páginas">
+      <a href="index.html">Início</a>
+      <a href="#kenburns">Ken Burns</a>
+      <a href="index.html#lista">Lançamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="s hero" id="topo" aria-labelledby="h-recursos-page">
+  <div class="wrap">
+    <div class="head">
+      <h1 id="h-recursos-page">Recursos do <span class="cy">Arco Motion</span></h1>
+      <p>Experimente os estudos de enquadramento, percurso, ritmo e profundidade. As animações explicam esses conceitos com esquemas ilustrados.</p>
+      <nav class="cta landing-actions" aria-label="Explorar por assunto">
+        <a href="#kenburns">Enquadramento, percurso e ritmo</a>
+        <a href="#camadas">Camadas e parallax</a>
+        <a href="#midias">Formatos e fluxo de trabalho</a>
+        <a href="#templates">Templates e comunidade</a>
+        <a href="#ia">Inteligência artificial</a>
+        <a href="index.html#exemplos">Galeria de exemplos</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="kenburns" aria-labelledby="h-kb">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Enquadramentos</p>
+      <h2 id="h-kb">Ken Burns. <span class="sub">Livre e com controle.</span></h2>
+      <p>A maioria dos programas de Ken Burns trabalha com apenas dois enquadramentos: um de partida e um de chegada. No Arco é livre e com controle. Use vários enquadramentos da mesma obra. Por enquanto, são até 30 Frames por filme. Você pode girar cada um e construir movimentos em curva. O olhar passa por onde você quer, na sequência que você decide. No estudo abaixo, quatro.</p>
+    </div>
+    <div class="media">
+      <div class="pair">
+        <div><div class="ovwrap sq" id="kb-ov"></div><p class="cap"><b>Uma obra quadrada</b> para um filme retangular: o formato da imagem não precisa ser o do filme. Os quatro Frames 16:9 entram um a um, são selecionados e escalados juntos, e então o filme toca. Ao reproduzir, o retângulo claro mostra a câmera.</p></div>
+        <div><div class="player" id="kb-pl" data-motion="kenburns" data-aspect="16/9" data-title="Estudo de movimento: quatro enquadramentos da mesma obra"></div>
+          <div class="chips" id="kb-chips" role="group" aria-label="Ir para o Frame (enquadramento)"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="mao" aria-labelledby="h-mao">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Curvas e percursos</p>
+      <h2 id="h-mao">O movimento segue a sua mão.</h2>
+      <p>No Lápis, você desenha com o dedo e o aplicativo interpreta as curvas. Na Caneta, você cria cada ponto, e cada ponto é um Frame. O traço não precisa ser literal: a câmera segue a sua linguagem. A obra não é alterada: o movimento é só de apresentação, sem deformar a imagem e sem inventar partes que ela não tem.</p>
+    </div>
+    <div class="media">
+      <div class="chips" style="margin:0 0 14px" role="group" aria-label="Tipo de percurso">
+        <button class="chip" type="button" id="m-hand" aria-pressed="true">Lápis · desenho com o dedo</button>
+        <button class="chip" type="button" id="m-vec" aria-pressed="false">Caneta · ponto a ponto</button>
+      </div>
+      <div class="pair">
+        <div><div class="ovwrap" id="mao-ov"></div><p class="cap"><b>Como o desenho acontece no app:</b> toque em + e escolha Lápis ou Caneta. No Lápis, o app interpreta a curva que você desenha com o dedo. Na Caneta, você cria cada ponto, e cada ponto é um Frame. Os Frames novos entram depois do Frame de origem e se ligam ao seguinte. Reconstrução animada, não uma captura.</p></div>
+        <div><div class="player" id="mao-pl" data-motion="hand" data-aspect="16/9" data-title="Estudo de movimento: câmera seguindo um percurso desenhado"></div><p class="cap"><b>O que a câmera mostra</b>: o recorte de cada Frame, passando pelos mesmos pontos desenhados ao lado: casas, igreja, moinho, farol e barco.</p></div>
+      </div>
+      <p class="hat" style="margin:28px 0 12px">Fidelidade ao seu trabalho</p>
+      <ul class="checks">
+        <li><b>Sem deformar</b>A imagem mantém a proporção em qualquer ponto do percurso.</li>
+        <li><b>Sem inventar</b>Nenhuma parte nova é gerada: só se mostra o que a obra já tem.</li>
+        <li><b>Apresentação não destrutiva</b>O movimento age na exibição, não no desenho original.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="tempo" aria-labelledby="h-tempo">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Tempo e fluidez</p>
+      <h2 id="h-tempo">O aplicativo cuida do ritmo.</h2>
+      <p>Velocidade constante, movimento inteligente e easing: três jeitos de decidir como a câmera se move entre os Frames, sem você calcular nada.</p>
+    </div>
+    <div class="media">
+      <div class="flow f3 nolink" role="list" aria-label="Tempo e fluidez do movimento">
+        <article class="step" role="listitem"><div class="vis" data-vis="speed"></div><h3>Velocidade constante</h3><p>Frames a distâncias diferentes pedem tempos diferentes: o trecho longo leva mais. O aplicativo recalcula os tempos para você, e a câmera segue sem acelerar nem frear.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="smart"></div><h3>Movimento inteligente</h3><p>Sem ele, a câmera acelera, freia e muda de velocidade de uma vez a cada Frame. Com ele, o aplicativo faz uma média das velocidades entre os trechos e o movimento flui sem trancos. O percurso que você desenhou continua o mesmo.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="ease"></div><h3>Easing: aceleração e desaceleração</h3><p>Easing é o jeito como a velocidade muda no caminho. Linear é a mesma velocidade o tempo todo. Com easing, a câmera começa devagar, ganha velocidade no meio e desacelera ao chegar.</p></article>
+      </div>
+      <p class="media-note">Esquemas animados para explicar a ideia, não capturas do aplicativo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="camadas" aria-labelledby="h-cam">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Camadas e profundidade</p>
+      <h2 id="h-cam">Parallax. <span class="sub">Cada camada no seu ritmo.</span></h2>
+      <p>Coloque várias imagens na mesma cena, até 30 camadas: fundo, elementos do meio, detalhes na frente. Quando a câmera se move, cada camada acompanha num ritmo diferente e a obra ganha profundidade.</p>
+    </div>
+    <div class="media">
+      <div class="pair">
+        <div><div class="xl" id="xl"></div><p class="cap"><b>Quatro camadas neste exemplo, e o Arco aceita até 30.</b> Aqui elas aparecem separadas em profundidade. A camada selecionada (contorno ciano) é movida em profundidade, uma de cada vez. Na câmera em movimento, as mais próximas se deslocam mais e as mais distantes, menos: é isso que cria a sensação de espaço.</p></div>
+        <div><div class="player" id="par-pl" data-motion="parallax" data-aspect="16/10" data-title="Estudo de movimento: parallax entre camadas"></div>
+          <div class="sw"><button type="button" role="switch" aria-checked="true" id="par-sw" aria-labelledby="par-lbl"></button><span id="par-lbl">Parallax ligado</span></div>
+          <p class="cap">O estudo passa por quatro enquadramentos. Desligue o parallax e compare: sem ele, todas as camadas andam juntas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="midias" aria-labelledby="h-mid">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Redes sociais</p>
+      <h2 id="h-mid">Crie para várias mídias.</h2>
+      <p>A mesma obra enquadrada nas proporções de YouTube, TikTok, Stories e posts do Instagram. O Arco trabalha as proporções; publicar em cada plataforma continua com você.</p>
+    </div>
+    <div class="media">
+      <div class="fmts" id="fmts"></div>
+      <div id="fmts-bar"></div>
+      <p class="media-note">Proporções, não formatos de arquivo. Estudo ilustrado, sem publicação automática em nenhuma plataforma.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="tutorial" aria-labelledby="h-tutorial">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Como funciona</p>
+      <h2 id="h-tutorial">Intuitivo. <span class="sub">Do jeito que deveria ser.</span></h2>
+      <p>Escolha o formato, traga sua imagem, posicione os Frames e desenhe o movimento, reproduza, ajuste só o ponto necessário e exporte. É nessa ordem que o Arco funciona, e os recursos das próximas seções partem daqui.</p>
+    </div>
+    <div class="media">
+      <div class="flow f6" role="list" aria-label="Seis passos do Arco Motion">
+        <article class="step" role="listitem"><div class="vis" data-vis="format"></div><span class="num" aria-hidden="true">1</span><h3>Escolha o formato</h3><p>Rede social ou tela: a proporção do seu filme.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="image"></div><span class="num" aria-hidden="true">2</span><h3>Monte o seu cenário</h3><p>Traga suas imagens para o palco. Você pode usar camadas e profundidade.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="plan"></div><span class="num" aria-hidden="true">3</span><h3>Posicione Frames/câmeras e desenhe o movimento</h3><p>Cada Frame é um ponto de parada; a curva liga um ao outro.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="play"></div><span class="num" aria-hidden="true">4</span><h3>Reproduza</h3><p>Veja o percurso rodando, do começo ao fim.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="adjust"></div><span class="num" aria-hidden="true">5</span><h3>Ajuste o enquadramento</h3><p>Mexa só no ponto que precisa de acerto.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="export"></div><span class="num" aria-hidden="true">6</span><h3>Exporte</h3><p>O filme fica salvo no rolo de fotos, pronto para postar.</p></article>
+      </div>
+      <p class="media-note">Esquemas ilustrativos feitos sobre uma obra de estudo. Não são capturas de tela do aplicativo. O "rolo de fotos" é uma representação: as saídas de exportação ainda dependem da validação final do Arco.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="atencao" aria-labelledby="h-at">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Atenção ao detalhe</p>
+      <h2 id="h-at">Você é o diretor do seu palco.</h2>
+      <p>Chame a atenção para o que importa com textos, setas, formas e GIFs, e junte imagens num clipe.</p>
+    </div>
+    <div class="media">
+      <div class="pair">
+        <div>
+          <div class="player" data-motion="dir" data-aspect="16/10" data-overlay="dir" data-title="Estudo: texto, seta e GIF entrando no mesmo quadro"></div>
+          <ol class="dsteps" id="dir-steps"><li><b>1 · Texto</b> explica o que é: o sol, a casa.</li><li><b>2 · Seta</b> leva o olhar a um detalhe.</li><li><b>3 · GIF</b> anima um ponto da imagem.</li></ol>
+        </div>
+        <div>
+          <div class="player" data-motion="clip" data-aspect="16/10" data-overlay="clip" data-title="Estudo: o dia raiando, três imagens transformadas em um clipe"></div>
+          <h3 style="margin:14px 0 4px">Clipe de imagens</h3><p class="cap" style="margin:0">Importe três imagens e transforme em um clipe. Aqui, o dia raiando: madrugada, amanhecer e manhã.</p>
+        </div>
+      </div>
+      <p class="media-note">Estudos ilustrados. O GIF é um adesivo animado de exemplo, e o clipe é uma sequência de três imagens, não um vídeo importado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="templates" aria-labelledby="h-tpl">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Templates</p>
+      <h2 id="h-tpl">Templates e exemplos prontos.</h2>
+      <p>Comece por um movimento pronto e adapte à sua obra. Esta é a biblioteca inicial; novos movimentos rápidos ainda estão sendo preparados.</p>
+    </div>
+    <div class="media">
+      <div class="grid g4">
+        <article class="card"><div class="player compact" data-motion="tzoomin" data-aspect="4/3" data-title="Estudo: zoom in"></div><h3>Zoom in</h3><p>Da cena inteira até um detalhe.</p></article>
+        <article class="card"><div class="player compact" data-motion="tzoomout" data-aspect="4/3" data-title="Estudo: zoom out"></div><h3>Zoom out</h3><p>Do detalhe ao conjunto.</p></article>
+        <article class="card"><div class="player compact" data-motion="tperc" data-aspect="4/3" data-title="Estudo: percurso"></div><h3>Percurso</h3><p>Passa por vários pontos da obra.</p></article>
+        <article class="card"><div class="player compact" data-motion="tpan" data-aspect="4/3" data-title="Estudo: panorâmica com parallax"></div><h3>Panorâmica com parallax</h3><p>Desliza de lado com camadas.</p></article>
+      </div>
+      <p class="media-note">Um de cada vez: ao iniciar um estudo, o anterior pausa. São estudos ilustrados, não os arquivos reais da biblioteca.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="comunidade" aria-labelledby="h-com">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Comunidade</p>
+      <h2 id="h-com">Use o poder da comunidade.</h2>
+      <p>Movimentos e efeitos são compartilhados por usuários do aplicativo. Em formato JSON, você importa e adapta à sua obra.</p>
+    </div>
+    <div class="media">
+      <div class="flow f4" role="list" aria-label="Fluxo de compartilhamento de movimentos">
+        <article class="step" role="listitem"><div class="vis" data-vis="choose"></div><span class="num" aria-hidden="true">1</span><h3>Inspire-se</h3><p>Encontre um movimento que se adapte à sua imagem.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="file"></div><span class="num" aria-hidden="true">2</span><h3>Obter o arquivo</h3><p>Copie o texto ou salve o arquivo.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="import"></div><span class="num" aria-hidden="true">3</span><h3>Importar</h3><p>Você pode importar um movimento ou um arquivo. É só copiar e colar.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="adapt"></div><span class="num" aria-hidden="true">4</span><h3>Adaptar</h3><p>Selecione todos os Frames (enquadramentos). Ajuste e escale o grupo ou cada um individualmente.</p></article>
+      </div>
+    </div>
+    <div class="media">
+      <div class="grid g3" id="com-grid">
+        <article class="card"><div class="player compact" data-motion="c1" data-aspect="16/10" data-title="Estudo: respiração lenta"></div><h3>Respiração lenta</h3><p>Aproxima e afasta devagar.</p><div class="tagrow"><span class="pill">Exemplo editorial</span></div></article>
+        <article class="card"><div class="player compact" data-motion="c2" data-aspect="16/10" data-title="Estudo: varredura horizontal"></div><h3>Varredura horizontal</h3><p>Corre a obra de ponta a ponta.</p><div class="tagrow"><span class="pill">Exemplo editorial</span></div></article>
+        <article class="card"><div class="player compact" data-motion="c3" data-aspect="16/10" data-title="Estudo: aproximação em arco"></div><h3>Aproximação em arco</h3><p>Chega ao detalhe fazendo uma curva.</p><div class="tagrow"><span class="pill">Exemplo editorial</span></div></article>
+        <article class="card"><div class="player compact" data-motion="c4" data-aspect="16/10" data-title="Estudo: entrada em camadas"></div><h3>Entrada em camadas</h3><p>Camadas que se afastam ao entrar.</p><div class="tagrow"><span class="pill">Exemplo editorial</span></div></article>
+        <article class="card"><div class="player compact" data-motion="c5" data-aspect="16/10" data-title="Estudo: subida"></div><h3>Subida</h3><p>Sobe pela obra em diagonal.</p><div class="tagrow"><span class="pill">Exemplo editorial</span></div></article>
+        <article class="card"><div class="player compact" data-motion="c6" data-aspect="16/10" data-title="Estudo: foco no círculo"></div><h3>Foco no círculo</h3><p>Abre em geral e fecha num ponto.</p><div class="tagrow"><span class="pill">Exemplo editorial</span></div></article>
+      </div>
+      <p class="media-note"><b>Exemplos do estúdio.</b> Estes movimentos não vêm da comunidade: são estudos nossos, usados como amostra. Depois serão substituídos por filmes e movimentos reais, cada um com um link para o arquivo, para copiar e colar. Hoje não há comunidade integrada, autores, contagens nem arquivos para baixar nesta página.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="ia" aria-labelledby="h-ia">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Inteligência artificial</p>
+      <h2 id="h-ia">Descreva o movimento.<br><span class="sub">A IA trabalha por você.</span></h2>
+      <p>Criamos e treinamos um agente especializado na criação de filmes e movimentos de câmera. Você descreve a sua cena e envia a sua imagem, e a inteligência faz tudo por você. Depois, é só refinar o resultado.</p>
+    </div>
+    <div class="status" role="note"><b>Em preparação</b><span>O agente especializado está em preparação e deve chegar junto com o lançamento. A forma de acesso e os planos ainda não foram definidos.</span></div>
+    <div class="media">
+      <div class="flow f3 nolink" role="list" aria-label="Fluxo previsto com IA">
+        <article class="step" role="listitem"><div class="vis" data-vis="prompt"></div><span class="num" aria-hidden="true">1</span><h3>Descreva a cena e envie a imagem</h3><p>Em palavras, o movimento que você imagina.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="result"></div><span class="num" aria-hidden="true">2</span><h3>O agente cria o movimento</h3><p>O agente cria o texto que descreve o movimento ou a cena. Você usa como quiser.</p></article>
+        <article class="step" role="listitem"><div class="vis" data-vis="edit"></div><span class="num" aria-hidden="true">3</span><h3>Você refina o resultado</h3><p>A resposta é só o ponto de partida: ajuste Frames e percurso do seu jeito.</p></article>
+      </div>
+      <p class="media-note">Ilustração do fluxo previsto, não uma função disponível. O prompt é um exemplo de texto e o movimento é um estudo ilustrado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="recursos" aria-labelledby="h-rec">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Recursos</p>
+      <h2 id="h-rec">Principais recursos.</h2>
+      <p>Da composição ao movimento, com controle sobre os enquadramentos e o tempo.</p>
+    </div>
+    <div class="rec">
+<div class="rcol">
+<section style="order:1" aria-label="Composição e criação"><h3><span class="ric" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".5"/></svg></span>Composição e criação</h3><ul><li>Parallax simples</li><li>Profundidade dos ativos e organização em até 30 camadas</li><li>Importação de GIFs animados</li><li>Criação de movie clips a partir de imagens</li><li>Textos, setas e formas editáveis</li><li>Criação e edição diretamente na tela do celular</li></ul></section>
+<section style="order:3" aria-label="Tempo e apresentação"><h3><span class="ric" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M10 9.2v4.6l4-2.3-4-2.3Z"/><path d="M8 21h8"/></svg></span>Tempo e apresentação</h3><ul><li>Vínculo temporal entre câmera e objetos, mantendo os eventos no momento certo ao alterar a duração</li><li>Edição proporcional do tempo, preservando a relação entre os movimentos</li><li>Aceleração e redução da velocidade</li><li>Loop e repetição automática do movimento</li><li>Apresentação em diferentes proporções de tela</li></ul></section>
+</div>
+<div class="rcol">
+<section style="order:2" aria-label="Movimento e enquadramentos"><h3><span class="ric" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c5 0 3-12 8-12s3 12 8 12"/><circle cx="4" cy="18" r="1.6"/><circle cx="12" cy="6" r="1.6"/><circle cx="20" cy="18" r="1.6"/></svg></span>Movimento e enquadramentos</h3><ul><li>Movimentos prontos para usar e adaptar</li><li>Efeito de tremor natural</li><li>Inserção de Frames pelo Stage, na disposição que você preferir</li><li>Velocidade constante: o aplicativo mantém a velocidade ao longo do percurso, conforme você posiciona os Frames</li><li>Movimento inteligente: evita trancos e aplica easing quando necessário</li><li>Ajustes personalizados de easing, globais ou locais</li><li>Desenho do movimento com o dedo</li><li>Edição de percursos com curvas vetoriais</li><li>Controle de rotação e escala durante o movimento</li><li>Organização e edição conjunta de grupos de enquadramentos</li><li>Até 30 Frames (enquadramentos) por filme, por enquanto</li></ul></section>
+<section style="order:4" aria-label="Troca e criação com IA"><h3><span class="ric" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9.5l-4.7 1.9L12 16l-1.8-4.6L5.5 9.5l4.7-1.9L12 3Z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z"/></svg></span>Troca e criação com IA</h3><ul><li>Compartilhamento de movimentos e contribuições da comunidade</li><li>Troca de arquivos de movimento em JSON</li><li class="prep">Geração de movimentos com inteligência artificial <span class="tag pend">Em preparação para o lançamento</span></li></ul></section>
+</div>
+</div>
+  </div>
+</section>
+
+<section class="s" id="feed" aria-labelledby="h-feed">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Potencial de marketing</p>
+      <h2 id="h-feed">O movimento atrai o olhar.</h2>
+      <p>Pesquisas de atenção visual indicam que o que se move tende a ser percebido antes do que está parado, principalmente quando a pessoa está só navegando. No feed, onde cada imagem disputa poucos segundos, esse primeiro olhar importa. Segurar o olhar depende de quem faz o movimento: de onde ele começa, o que mostra e onde para. Com o Arco, você cuida do primeiro olhar e do que vem depois, e deixa a obra como ela é.</p>
+    </div>
+    <div class="media">
+      <div style="max-width:880px;margin:0 auto 6px">
+        <div class="player" data-motion="zoom" data-aspect="16/9" data-autoplay="1" data-id="zoom" data-title="Estudo de movimento: a obra inteira, parada, e depois um zoom rápido no detalhe"></div>
+        <p class="cap" style="text-align:center">Primeiro o quadro inteiro, parado. Depois um zoom rápido leva o olhar ao detalhe.</p>
+      </div>
+      <p class="media-note">Fonte: Hong, Cheung e Thong (2021), <i>Journal of the Association for Information Systems</i>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s closing" aria-labelledby="h-interesse">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-interesse">Quer experimentar com suas obras?</h2>
+      <div class="cta"><a class="btn" href="index.html#lista">Tenho interesse no Arco Motion</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/arco-motion-fundo-escuro.svg" width="382" height="100" alt="Arco Motion">
+    <p>Protótipo do site de lançamento. As ilustrações em movimento são estudos originais para revisar composição: não são obras de artistas, nem gravações ou exportações do aplicativo. Sem cookies, sem analytics, sem envio de dados.</p>
+  </div>
+</footer>
+
+<script src="js/scenes.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

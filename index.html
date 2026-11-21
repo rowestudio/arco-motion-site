@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arco Motion — Sua obra. Seu olhar. Agora em movimento</title>
+<meta name="description" content="Arco Motion: mostre ilustração, pintura e fotografia em movimento nas redes sociais e no portfólio, sem imprimir nem filmar a obra.">
+<meta name="theme-color" content="#24262b">
+<link rel="icon" type="image/png" href="assets/arcomotion-simbolo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Arco Motion — início">
+      <img src="assets/arco-motion-fundo-escuro.svg" width="382" height="100" alt="Arco Motion">
+    </a>
+    <nav class="nav landing-nav" aria-label="Páginas">
+      <a href="#exemplos">Exemplos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="#lista">Lançamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="s hero" id="topo" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Portfólio em movimento</p>
+      <h1 id="h-hero">Sua obra. Seu olhar. <span class="cy">Agora em movimento.</span></h1>
+      <p>Transforme ilustrações, fotos e outras obras prontas em conteúdo em movimento. Escolha o que mostrar, por onde o olhar passa e onde ele faz uma pausa.</p>
+    <div class="cta landing-actions"><a class="btn" href="#lista">Quero testar o beta</a><a href="recursos.html">Ver recursos</a></div>
+    </div>
+    <div class="media">
+      <div class="player" data-motion="hero" data-aspect="16/9" data-id="hero" data-autoplay="1" data-title="Estudo de movimento: câmera percorrendo uma paisagem ilustrada"></div>
+      <p class="rm" role="note">Movimento reduzido está ativo no seu aparelho: nada começa sozinho. Use o botão de reproduzir quando quiser.</p>
+      <p class="media-note">Estudo conceitual de movimento de câmera sobre uma ilustração.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="exemplos" aria-labelledby="h-ex">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Exemplos</p>
+      <h2 id="h-ex">Veja o que seu portfólio pode mostrar.</h2>
+      <p>Explore como um movimento revela detalhes em ilustrações, fotos e outros trabalhos visuais.</p>
+    </div>
+    <div class="media">
+      <div class="tabs" role="tablist" aria-label="Tipo de trabalho" id="tabs"></div>
+      <div id="tabpanels"></div>
+      <p class="media-note">Galeria de estudos de movimento.</p>
+    </div>
+    <section class="founder-story" id="historia" aria-labelledby="h-historia">
+      <h2 id="h-historia">Por que eu criei o Arco Motion</h2>
+      <figure>
+        <blockquote>
+          <p>Eu queria mostrar minhas ilustrações em movimento nas redes sociais. Queria escolher por onde a câmera passa, de que detalhe ela se aproxima e onde para um pouco. As ferramentas que encontrei eram complicadas demais pro que eu queria fazer ou limitadas demais pra me dar esse controle. Aí resolvi criar a minha.</p>
+        </blockquote>
+        <figcaption><strong>Roberto Weigand</strong><span>Ilustrador e criador do Arco Motion</span></figcaption>
+      </figure>
+    </section>
+  </div>
+</section>
+
+<section class="s" aria-labelledby="h-destaques">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-destaques">O movimento segue o seu olhar.</h2>
+      <p>Escolha os enquadramentos, desenhe o percurso, ajuste o ritmo e as pausas. Use camadas e parallax para dar profundidade à cena.</p>
+      <div class="cta"><a class="btn" href="recursos.html">Explorar os recursos</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="s closing" id="lista" aria-labelledby="h-fim">
+  <div class="wrap">
+    <div class="head">
+      <p class="hat">Lançamento</p>
+      <h2 id="h-fim">Seu portfólio merece um olhar cinematográfico.</h2>
+      <p>Escolha como você quer acompanhar o Arco Motion.</p>
+    </div>
+    <div class="media">
+      <img class="sym" src="assets/arcomotion-simbolo.png" width="801" height="801" alt="">
+      <form class="signup" id="signup" novalidate>
+        <label for="em">Seu e-mail</label>
+        <div class="row">
+          <input id="em" type="email" inputmode="email" autocomplete="off" placeholder="nome@exemplo.com">
+          <button class="btn" type="submit">Registrar interesse</button>
+        </div>
+        <fieldset class="signup-interests">
+          <legend>Tenho interesse em</legend>
+          <label><input type="checkbox" name="interesse" value="beta"> Testar o beta</label>
+          <label><input type="checkbox" name="interesse" value="novidades"> Acompanhar novidades</label>
+          <label><input type="checkbox" name="interesse" value="lancamento"> Receber o aviso de lançamento</label>
+        </fieldset>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+        <p class="media-note" style="margin:0">Lista demonstrativa: este protótipo não envia, não guarda e não rastreia nada. A ferramenta e o tratamento dos dados serão definidos com o proprietário antes de qualquer integração.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/arco-motion-fundo-escuro.svg" width="382" height="100" alt="Arco Motion">
+    <p>Protótipo do site de lançamento. As ilustrações em movimento são estudos originais para revisar composição: não são obras de artistas, nem gravações ou exportações do aplicativo. Sem cookies, sem analytics, sem envio de dados.</p>
+  </div>
+</footer>
+
+<script src="js/scenes.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
