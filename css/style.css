@@ -384,5 +384,5 @@ footer p { margin: 0; max-width: 78ch; }
   .replay-pair { grid-template-columns: 1fr; }
 }
 
-body.landing .brand img { height: 46px; }
-body.landing footer img { height: 38px; }
+body.landing .brand img { height: 57.5px; }
+body.landing footer img { height: 47.5px; }
